@@ -9,7 +9,7 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def is_last_message_from_sender(chat_log, sender_name="Vasu"):
+def is_last_message_from_sender(chat_log, sender_name="name"):
     messages = chat_log.strip().split("/2025]")[-1]
     return sender_name in messages
 
